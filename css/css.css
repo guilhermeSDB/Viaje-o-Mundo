@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;900&display=swap");
+
+:root {
+  --vermelho: white; /* variaveis */
+  --preta: #141414; /* variaveis */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+/* BASE ELEMENTS */
+
+body {
+  background: #736f72;
+  color: white;
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* netflix on the left side and menu on the right side */
+}
+
+header .logo {
+  display: flex;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+header nav a {
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  margin-right: 0.8rem; /* move menu to the side */
+  font-weight: 300;
+}
+
+header nav a:hover {
+  color: black; /* change color by moving mouse to element */
+  background-color: white;
+  padding: 15px;
+  border-radius: 2px;
+  font-weight: 300;
+}
+
+hr {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* MAIN MOVIE */
+.main-movie {
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 100%),
+    url("../titanic.jpg");
+  height: 800px;
+
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-movie .description {
+  margin-top: 20px;
+  margin-bottom: 55px;
+}
+
+.title {
+  font-weight: 600;
+  margin-top: 15%;
+  font-size: 45px;
+  color: rgb(243, 236, 236);
+}
+
+/* buttons movie */
+.button {
+  background-color: #5a9749;
+  border: none;
+  color: rgb(243, 236, 236);
+  border-radius: 20px;
+
+  padding: 0.5rem 5rem;
+  margin: 2rem 0;
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #92cc82;
+  color: rgb(243, 236, 236);
+  transition: 1s ease all;
+}
+
+.wrapper {
+  margin-left: 2rem;
+}
+
+.main-movie .wrapper {
+  width: 40%;
+  margin-bottom: 10%;
+}
+
+.box {
+  max-height: 350px;
+  width: 90px;
+  display: block;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.carrosel-filmes {
+  font-weight: 100;
+  margin-top: 6px;
+  margin-bottom: 19px;
+}
+
+#flags a {
+  font-weight: 100;
+}
+
+#by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(7, 7, 7);
+  color: var(--vermelho);
+  padding: 10px;
+}
+
+img {
+  height: 30rem !important;
+  width: 200px;
+  object-fit: cover !important;
+}
+
+.item {
+  margin: 0 2rem;
+  width: 20rem !important;
+}
+
+.item p:nth-child(3) {
+  background-color: white;
+  padding: 2rem;
+  margin: 0 2rem;
+  position: absolute;
+  max-height: 100%;
+  width: 87%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in;
+  overflow: auto;
+}
+
+.item:hover .p {
+  transform: translateY(0);
+}
